@@ -1,17 +1,17 @@
 // import unlike from '/public/img/unlike.svg';
 
-function Card(){
+function Card(props){
   return(
     <div className="card">
       <div className="favorite">
         <img width={32} height={32} src="/img/unlike.svg" alt="Unlike"/>
       </div>
-      <img className="card__img" width={155} height={180} src="/img/vazons/vazon1.jpg" alt="Vazon"/>
-      <h5 className="mt-10 mb-10">Красивая и стильная коллекция из трех вазонов</h5>
+      <img className="card__img" width={155} height={180} src={props.imageUrl} alt="Vazon"/>
+      <h5 className="mt-10 mb-10">{props.title}</h5>
       <div className="d-flex justify-between align-center">
         <div className="d-flex flex-column">
           <span>Цена:</span>
-          <b>55 555 грн.</b>
+          <b>{props.price} грн.</b>
         </div>
         <button className="button">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
